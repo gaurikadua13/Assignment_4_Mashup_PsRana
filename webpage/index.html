@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Mashup Creator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="min-h-screen flex items-center justify-center" style="background-color: #F5F5F7;">
+    <div class="w-full max-w-md mx-4">
+        <h1 class="text-5xl font-bold text-center mb-8" style="color: #1D1D1F;">Music Mashup Creator</h1>
+        <form class="bg-white rounded-3xl p-8 space-y-6" style="box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
+            <div>
+                <label class="block text-lg font-semibold mb-2" style="color: #1D1D1F;">Singer Name</label>
+                <input type="text" id="singer" placeholder="Enter artist name" 
+                       class="apple-input">
+            </div>
+            <div>
+                <label class="block text-lg font-semibold mb-2" style="color: #1D1D1F;">Number of Videos</label>
+                <input type="number" id="videos" placeholder="Minimum 10" 
+                       class="apple-input">
+            </div>
+            <div>
+                <label class="block text-lg font-semibold mb-2" style="color: #1D1D1F;">Duration (seconds)</label>
+                <input type="number" id="duration" placeholder="Minimum 20" 
+                       class="apple-input">
+            </div>
+            <div>
+                <label class="block text-lg font-semibold mb-2" style="color: #1D1D1F;">Email Address</label>
+                <input type="email" id="email" placeholder="your@email.com" 
+                       class="apple-input">
+            </div>
+            <button id="submitBtn" type="submit" class="apple-button">
+                <span id="btnText">Create Mashup</span>
+                <span id="loader" class="hidden"></span>
+            </button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
